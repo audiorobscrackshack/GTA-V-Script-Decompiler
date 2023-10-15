@@ -69,6 +69,8 @@ namespace Decompiler
         public static readonly TypeInfo EMPSTAT = new(6, "eMPStat", "stat", "emps", new(typeof(Enums.MPStat)));
         public static readonly TypeInfo EEVENTTYPE = new(6, "eEventType", "type", "eet", new(typeof(Enums.EventType)));
         public static readonly TypeInfo EVIEWMODE = new(6, "eViewMode", "mode", "evm", new(typeof(Enums.ViewMode)));
+        
+        public static readonly TypeInfo EUGCTYPE = new(6, "eUserGeneratedContentType", "type", "eugct", new(typeof(Enums.UGCType)));
 
         public static TypeInfo GetFromName(string name)
         {
