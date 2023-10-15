@@ -34,7 +34,10 @@ namespace Decompiler
                     {
                         if (ulong.TryParse(nat.Trim(), NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var older))
                         {
-                            TranslationTable[older] = newer;
+                            //TranslationTable[older] = newer;
+                            TranslationTable.Add(newer, older);
+                            // To use the older crossmap format (older hash first, newer hash after).
+                            // Current crossmap for map is new hash first, old hash after.
                         }
                     }
                 }
