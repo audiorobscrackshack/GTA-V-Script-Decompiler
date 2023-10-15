@@ -57,7 +57,6 @@ namespace Decompiler
 				  substituteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 				  commentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 				  toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-				  isRDR2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 				  showArraySizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 				  reverseHashesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 				  includeNativeNamespaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +115,6 @@ namespace Decompiler
 				  fctb1.Cursor = System.Windows.Forms.Cursors.IBeam;
 				  fctb1.DisabledColor = System.Drawing.Color.FromArgb(100, 180, 180, 180);
 				  fctb1.Dock = System.Windows.Forms.DockStyle.Fill;
-				  fctb1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 				  fctb1.IsReplaceMode = false;
 				  fctb1.Language = FastColoredTextBoxNS.Language.CSharp;
 				  fctb1.LeftBracket = '(';
@@ -210,7 +208,7 @@ namespace Decompiler
 				  // 
 				  // optionsToolStripMenuItem
 				  // 
-				  optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { intStyleToolStripMenuItem, showLocalizedTextsToolStripMenuItem, enumStyleToolStripMenuItem, toolStripSeparator5, isRDR2ToolStripMenuItem, showArraySizeToolStripMenuItem, reverseHashesToolStripMenuItem, includeNativeNamespaceToolStripMenuItem, declareVariablesToolStripMenuItem, shiftVariablesToolStripMenuItem, globalAndStructHexIndexingToolStripMenuItem, showFuncPointerToolStripMenuItem, useMultiThreadingToolStripMenuItem, includeFunctionPositionToolStripMenuItem, includeFunctionHashToolStripMenuItem, uppercaseNativesToolStripMenuItem, toolStripSeparator4, exportTablesToolStripMenuItem, resetGlobalTypesToolStripMenuItem });
+				  optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { intStyleToolStripMenuItem, showLocalizedTextsToolStripMenuItem, enumStyleToolStripMenuItem, toolStripSeparator5, showArraySizeToolStripMenuItem, reverseHashesToolStripMenuItem, includeNativeNamespaceToolStripMenuItem, declareVariablesToolStripMenuItem, shiftVariablesToolStripMenuItem, globalAndStructHexIndexingToolStripMenuItem, showFuncPointerToolStripMenuItem, useMultiThreadingToolStripMenuItem, includeFunctionPositionToolStripMenuItem, includeFunctionHashToolStripMenuItem, uppercaseNativesToolStripMenuItem, toolStripSeparator4, exportTablesToolStripMenuItem, resetGlobalTypesToolStripMenuItem });
 				  optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
 				  optionsToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
 				  optionsToolStripMenuItem.Text = "Options";
@@ -309,15 +307,6 @@ namespace Decompiler
 				  // 
 				  toolStripSeparator5.Name = "toolStripSeparator5";
 				  toolStripSeparator5.Size = new System.Drawing.Size(295, 6);
-				  // 
-				  // isRDR2ToolStripMenuItem
-				  // 
-				  isRDR2ToolStripMenuItem.Enabled = false;
-				  isRDR2ToolStripMenuItem.Name = "isRDR2ToolStripMenuItem";
-				  isRDR2ToolStripMenuItem.Size = new System.Drawing.Size(298, 26);
-				  isRDR2ToolStripMenuItem.Text = "RDR2";
-				  isRDR2ToolStripMenuItem.ToolTipText = "The decompiler will restart if this setting is changed";
-				  isRDR2ToolStripMenuItem.Click += isRDR2ToolStripMenuItem_Click;
 				  // 
 				  // showArraySizeToolStripMenuItem
 				  // 
@@ -695,7 +684,6 @@ namespace Decompiler
 			private System.Windows.Forms.ToolStripMenuItem disabledToolStripMenuItem1;
 			private System.Windows.Forms.ToolStripMenuItem substituteToolStripMenuItem;
 			private System.Windows.Forms.ToolStripMenuItem commentToolStripMenuItem;
-			private System.Windows.Forms.ToolStripMenuItem isRDR2ToolStripMenuItem;
 	  }
 }
 #endif // OS_WINDOWS

@@ -100,8 +100,8 @@ namespace Decompiler
 
         public void LoadData()
         {
-            var native_file_path = Properties.Settings.Default.IsRDR2 ? "natives_rdr.json" : "natives.json";
-            var native_resource = Properties.Settings.Default.IsRDR2 ? Properties.Resources.native_db_json_rdr : Properties.Resources.native_db_json;
+            var native_file_path = "natives.json";
+            var native_resource = Properties.Resources.native_db_json;
 
             string file = Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
                 native_file_path);

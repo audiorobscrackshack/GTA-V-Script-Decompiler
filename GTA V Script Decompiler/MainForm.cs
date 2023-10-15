@@ -38,7 +38,6 @@ namespace Decompiler
 				  includeNativeNamespaceToolStripMenuItem.Checked = Properties.Settings.Default.ShowNativeNamespace;
 				  globalAndStructHexIndexingToolStripMenuItem.Checked = Properties.Settings.Default.HexIndex;
 				  uppercaseNativesToolStripMenuItem.Checked = Properties.Settings.Default.UppercaseNatives;
-				  isRDR2ToolStripMenuItem.Checked = Properties.Settings.Default.IsRDR2;
 
 				  showLineNumbersToolStripMenuItem.Checked = fctb1.ShowLineNumbers = Properties.Settings.Default.LineNumbers;
 
@@ -456,15 +455,6 @@ namespace Decompiler
 				  uppercaseNativesToolStripMenuItem.Checked = !uppercaseNativesToolStripMenuItem.Checked;
 				  Properties.Settings.Default.UppercaseNatives = uppercaseNativesToolStripMenuItem.Checked;
 				  Properties.Settings.Default.Save();
-			}
-
-			private void isRDR2ToolStripMenuItem_Click(object sender, EventArgs e)
-			{
-				  isRDR2ToolStripMenuItem.Checked = !isRDR2ToolStripMenuItem.Checked;
-				  Properties.Settings.Default.IsRDR2 = isRDR2ToolStripMenuItem.Checked;
-				  Properties.Settings.Default.Save();
-				  Application.Restart();
-				  Environment.Exit(0);
 			}
 
 			#endregion

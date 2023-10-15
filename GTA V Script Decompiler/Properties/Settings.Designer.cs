@@ -202,17 +202,5 @@ namespace Decompiler.Properties {
                 this["EnumDisplayType"] = value;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool IsRDR2 {
-            get {
-                return ((bool)(this["IsRDR2"]));
-            }
-            set {
-                this["IsRDR2"] = value;
-            }
-        }
     }
 }

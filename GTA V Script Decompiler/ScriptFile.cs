@@ -243,24 +243,11 @@ namespace Decompiler
                     case Opcode.ILT_JZ:
                     case Opcode.ILE_JZ: temp += 2; break;
                     case Opcode.CALL:
-                    case Opcode.STATIC_U24:
-                    case Opcode.STATIC_U24_LOAD:
-                    case Opcode.STATIC_U24_STORE:
                     case Opcode.GLOBAL_U24:
                     case Opcode.GLOBAL_U24_LOAD:
                     case Opcode.GLOBAL_U24_STORE:
                     case Opcode.PUSH_CONST_U24: temp += 3; break;
-                    case Opcode.SWITCH:
-                        {
-                            if (Properties.Settings.Default.IsRDR2)
-                            {
-                                int length = (CodeTable[temp + 2] << 8) | CodeTable[temp + 1];
-                                temp += 2 + 6 * length;
-                            }
-                            else
-                                temp += 1 + 6 * CodeTable[temp + 1];
-                            break;
-                        }
+                    case Opcode.SWITCH: temp += 1 + 6 * CodeTable[temp + 1]; break;
                     case Opcode.TEXT_LABEL_ASSIGN_STRING:
                     case Opcode.TEXT_LABEL_ASSIGN_INT:
                     case Opcode.TEXT_LABEL_APPEND_STRING:
@@ -342,24 +329,11 @@ namespace Decompiler
                     case Opcode.ILT_JZ:
                     case Opcode.ILE_JZ: advpos(2); break;
                     case Opcode.CALL:
-                    case Opcode.STATIC_U24:
-                    case Opcode.STATIC_U24_LOAD:
-                    case Opcode.STATIC_U24_STORE:
                     case Opcode.GLOBAL_U24:
                     case Opcode.GLOBAL_U24_LOAD:
                     case Opcode.GLOBAL_U24_STORE:
                     case Opcode.PUSH_CONST_U24: advpos(3); break;
-                    case Opcode.SWITCH:
-                        {
-                            if (Properties.Settings.Default.IsRDR2)
-                            {
-                                int length = (CodeTable[offset + 2] << 8) | CodeTable[offset + 1];
-                                advpos(2 + 6 * length);
-                            }
-                            else
-                                advpos(1 + 6 * CodeTable[offset + 1]);
-                            break;
-                        }
+                    case Opcode.SWITCH: advpos(1 + 6 * CodeTable[offset + 1]); break;
                     case Opcode.TEXT_LABEL_ASSIGN_STRING:
                     case Opcode.TEXT_LABEL_ASSIGN_INT:
                     case Opcode.TEXT_LABEL_APPEND_STRING:

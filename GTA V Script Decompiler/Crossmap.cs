@@ -8,9 +8,9 @@ namespace Decompiler
     {
         public Dictionary<ulong, ulong> TranslationTable = new();
 
-        public ulong TranslateHash(ulong hash) => (!Properties.Settings.Default.IsRDR2 && TranslationTable.TryGetValue(hash, out var newHash)) ? newHash : hash;
+			public ulong TranslateHash(ulong hash) => TranslationTable.TryGetValue(hash, out var newHash) ? newHash : hash;
 
-        public Crossmap()
+			public Crossmap()
             : base()
         {
             StreamReader sr;
