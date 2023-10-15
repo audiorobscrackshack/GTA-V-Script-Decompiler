@@ -266,13 +266,17 @@
 0xCA79453F NAME _UNLOAD_COLLISION_AND_DELETE_PED # unsure
 0xCA79453F ARG_NAME 0 pPed
 
+# 0 is a Vec3. 3 is also a Vec3.
+# This doesn't interpret Vec3s properly so it looks ugly like that. Oh well.
+# And you're gonna gonna end up with stuff like 'coordsVeh1.f1' for Y. :/
+# TODO: Fix Vector3s (struct override like the START_SCRIPT_WITH_ARGS native?)
 0x9F66817B NAME _CALCULATE_VEHICLE_HEADING
 0x9F66817B ARG_NAME 0 coordsVeh1
-0x9F66817B ARG_TYPE 0 Vector3
-0x9F66817B ARG_NAME 1 coordsVeh2
-0x9F66817B ARG_TYPE 1 Vector3
-0x9F66817B ARG_TYPE 2 bool
-0x9F66817B ARG_NAME 2 reverseHeading
+0x9F66817B ARG_TYPE 0 float
+0x9F66817B ARG_NAME 3 coordsVeh2
+0x9F66817B ARG_TYPE 3 float
+0x9F66817B ARG_TYPE 6 bool
+0x9F66817B ARG_NAME 6 reverseHeading
 0x9F66817B RETURN float
 
 0xE6BCDE88 NAME _SET_VEHICLE_HEADING_TOWARDS_ANOTHER_VEHICLE
